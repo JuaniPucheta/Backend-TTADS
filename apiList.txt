@@ -1,0 +1,6 @@
+GET localhost:3000/api/usuarios ||  recupera todos los usuarios
+POST localhost:3000/api/usuarios/register ||  crea un usuario
+PUT localhost:3000/api/usuarios/1 ||  edita el usuario con id = 1
+DELETE localhost:3000/api/usuarios/1 ||  elimina el usuario con id = 1
+
+localhost:3000/api/users/login ||  elimina el usuario con id = 1

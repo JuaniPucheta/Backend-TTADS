@@ -1,14 +1,14 @@
 const router = require('express').Router();
+const bcrypt = require('bcryptjs');
 const { Usuario } = require('../../db') // traigo la entidad usuarios
-
-// localhost:3000/api/usuarios
 
 router.get('/', async (req, res) =>{
     const usuarios = await Usuario.findAll(); // devuelve una promesa
     res.json(usuarios);
 } );
 
-router.post('/', async (req, res) =>{
+router.post('/register', async (req, res) =>{
+    req.body.pw = bcrypt.hashSync(req.body.pw, 10); // agarro la pw, y le paso 10 veces el algoritmo de encriptacion
     const usuarios = await Usuario.create(req.body) // creo al usuario con los datos que trae la api
     res.json(usuarios); // aca me la devuelve para ver q onda
 } );
