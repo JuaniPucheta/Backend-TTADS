@@ -4,3 +4,5 @@ body-parser --> esta es para que el body sea leido como json
 express --> esta es para que el servidor funcione
 mysql12 --> esta es para la base de datos
 sequelize --> esta es para la base de datos
+jwt-simple --> esta es para crear el token
+moment --> esta es para poder trabajar con fechas
