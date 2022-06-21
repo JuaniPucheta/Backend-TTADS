@@ -19,4 +19,11 @@ router.put('/:id', async (req, res) =>{
     res.json({success: 'Usuario actualizado'});
 } );
 
+router.delete('/:id', async (req, res) =>{
+    await Usuario.destroy({
+        where: {id: req.params.id}
+    }) // elimino el usuario que tenga esa id
+    res.json({success: 'Usuario destruido'});
+} );
+
 module.exports = router;
